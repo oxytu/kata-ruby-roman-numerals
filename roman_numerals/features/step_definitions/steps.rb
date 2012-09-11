@@ -26,3 +26,9 @@ Then /^it should be converted to the roman numeral '(\w+)'$/ do |r|
   set_roman(r)
   decimal.to_roman.should == roman
 end
+
+Then /^a '(\w+)' should be raised$/ do |exception_class_name|
+  expect {
+    decimal.to_roman
+  }.to raise_exception(exception_class_name.constantize)
+end
