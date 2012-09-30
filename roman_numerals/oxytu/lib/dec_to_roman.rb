@@ -1,71 +1,45 @@
 #!/usr/bin/ruby
 
+require 'defs'
+
 num = ARGV[0].to_i
 
-$values = { :m => 1000, :d => 500, :c => 100, :l => 50, :x => 10, :v => 5, :i => 1 }
+$extended_values = {}
 
-def reverse_valueof(c)
-  $values.invert[c].to_s
-end
-
-def get_highest_value
-  $values.invert.keys.max
-end
-
-def get_minimum_value_exceeding(val)
-  sorted = $values.invert.keys.sort
-  min = 0
-  idx = 0
-  while min < val
-    min = sorted[idx]
-    idx += 1
+def build_extended_values
+  $values.keys.each do |v|
+    if ($values[v].to_s[0,1] == "1" && $values[v] < MAX_DEC)
+      five_sym = $values.index($values[v] * 5)
+      ten_sym = $values.index($values[v] * 10)
+      $extended_values[$values[v]] = v.to_s
+      $extended_values[$values[v] * 2] = v.to_s + v.to_s
+      $extended_values[$values[v] * 3] = v.to_s + v.to_s + v.to_s
+      $extended_values[$values[v] * 4] = v.to_s + five_sym.to_s
+      $extended_values[$values[v] * 6] = five_sym.to_s + v.to_s
+      $extended_values[$values[v] * 7] = five_sym.to_s + v.to_s + v.to_s
+      $extended_values[$values[v] * 8] = five_sym.to_s + v.to_s + v.to_s + v.to_s
+      $extended_values[$values[v] * 9] = v.to_s + ten_sym.to_s
+    else
+      $extended_values[$values[v]] = v.to_s
+    end
   end
-  #puts "get_minimum_value_exceeding(#{val}) = #{sorted[idx-1]}"
-  sorted[idx-1]
-end
-
-def delete_highest_value 
-  $values.delete($values.invert[get_highest_value])
-end
-
-def stack_dump(stack)
-  rv = stack.reverse.map{ |e| e.to_s }.join
-  stack.clear
-  return rv
 end
 
 def dec_to_roman(num)
-  stack = []
-  value = ""
+  build_extended_values
 
-  value += reverse_valueof(get_highest_value) * (num / get_highest_value)
-  num -= get_highest_value * (num / get_highest_value)
-  lastnum = 0
-
-  while !(num >= 0 && num <= 3)
-    #puts "Stepping: Output: #{value}, Remainder: #{num}, Stack: #{stack.inspect}"
-    if (num < 0)
-      minex = get_minimum_value_exceeding(-num)
-      stack << reverse_valueof(minex)
-      lastnum = num
-      num += minex
-    else
-      if (lastnum < 0)
-        #puts "Stack dump: #{stack.inspect}"
-        value += stack_dump(stack)
-        stack.clear
-      end
-      minex = get_minimum_value_exceeding(num)
-      stack << reverse_valueof(minex)
-      lastnum = num
-      num -= minex
+  result_string = ""
+  factor = 10
+  (0..Math.log10(num).floor).each do |p|
+    lookup_part = num % factor
+    if (lookup_part > 0)
+      result_string = $extended_values[lookup_part] + result_string
+      num -= (num % factor)
     end
+    factor *= 10
   end
-  value += stack_dump(stack)
-  if (num <= 3)
-    value += "i" * num
-  end
-  value
+
+  result_string
 end
 
 if __FILE__==$0

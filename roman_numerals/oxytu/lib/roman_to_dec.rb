@@ -1,12 +1,14 @@
 #!/usr/bin/ruby
 
+require 'defs'
+
 def valueof(c)
-  { :m => 1000, :d => 500, :c => 100, :l => 50, :x => 10, :v => 5, :i => 1 }[c.to_sym]
+  $values[c]
 end
 
 def roman_to_dec(num)
-  puts num
-  arr = num.downcase.scan(/./)
+  return if (num.to_i > MAX_DEC)
+  arr = num.downcase.scan(/./u)
   value = 0
 
   arr.count.times do |i|
