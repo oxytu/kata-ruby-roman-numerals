@@ -31,15 +31,57 @@ Feature: Specification of a text-based tree and the corresponding parser
           ]
         ]
 
+  Scenario: A complex tree with properties on nodes and edges
+    Given a tree structure <Structure>
+    Then  it should be converted to a ruby <DataType>
 
+    Examples:
 
+      Structure
 
-+-[name: "Root edge"]- A [name: "Vehicle"]
-  +-[name: "extends"]- B [name: "Car"]
-  | +-[name: "extends"]- C [name: "BMW"]
-  | +-[name: "extends"]- D [name: "Mercedes"]
-  |   +-[name: "extends"]- E [name: "A-Class"]
-  |   +-[name: "extends"]- F [name: "B-Class"]
-  |   +-[name: "extends"]- G [name: "C-Class"]
-  +-[name: "extends"]- H [name: "Bicycle"]
+        +-[name: "Root edge"]- A [name: "Vehicle"]
+          +-[name: "extends"]- B [name: "Car"]
+          | +-[name: "extends"]- C [name: "BMW"]
+          | +-[name: "extends"]- D [name: "Mercedes"]
+          |   +-[name: "extends"]- E [name: "A-Class"]
+          |   +-[name: "extends"]- F [name: "B-Class"]
+          |   +-[name: "extends"]- G [name: "C-Class"]
+          +-[name: "extends"]- H [name: "Bicycle"]
 
+      DataType
+
+        [ [ { name: "Root edge" },
+            "A",
+            { name: "Vehicle" },
+            [ [ { name: "extends" },
+                "B",
+                { name: "Car" },
+                [ [ { name: "extends" },
+                    "C",
+                    { name: "BMW" }
+                  ],
+                  [ { name: "extends" },
+                    "D",
+                    { name: "Mercedes" },
+                    [ [ { name: "extends" },
+                        "E",
+                        { name: "A-Class" }
+                      ],
+                      [ { name: "extends" },
+                        "F",
+                        { name: "B-Class" }
+                      ],
+                      [ { name: "extends" },
+                        "G",
+                        { name: "C-Class" }
+                      ],
+                    ]
+                  ]
+                ]
+              ],
+              [ { name: "extends" },
+                "H",
+                { name: "Bicycle" }
+              ]
+            ]
+        ] ]
