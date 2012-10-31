@@ -1,0 +1,12 @@
+This repository contains some Katas, which should help you
+craft your programming skills by solving complex problems.
+
+Each Kata has it's own subdirectory, containing unit tests in
+cucumber or rspec, or both. Further subdirectories contain
+some solutions (The quality of the solutions may differ and
+you are welcome to provide better solutions and open a
+pull request for them).
+
+The only rule is: implementations MUST pass the tests to get
+published. You can also improve the tests (find mistakes in the
+current implementations) and submit them.
