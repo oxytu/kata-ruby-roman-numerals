@@ -24,7 +24,7 @@ module DecimalToRoman
       elsif n == 4
         ROMAN_NUMERALS[2 * power] + ROMAN_NUMERALS[2 * power + 1]
       elsif n == 5
-        ROMAN_NUMERALS[2 * power + 1]
+        ROMAN_NUMERALS[2 * power + 1].dup
       elsif n > 5 && n <= 8
         ROMAN_NUMERALS[2 * power + 1] + ROMAN_NUMERALS[2 * power] * (n - 5)
       elsif n == 9
