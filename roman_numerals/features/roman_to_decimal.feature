@@ -16,11 +16,6 @@ Feature: Convert roman numerals to decimals
 
       'I'.to_i \#=> 1
 
-#  Scenario: Raise a RomanNumeralToDecimalTransloationError when the given decimal
-#  number is larger then 10000
-#    Given a decimal number 10001
-#    Then a 'DecimalToRomanNumeralTranslationError' should be raised
-
   Scenario Outline: Convert roman numerals to decimals
     Given a roman numeral '<Roman Numeral>'
     Then it should be converted to the decimal <Decimal>
@@ -39,5 +34,6 @@ Feature: Convert roman numerals to decimals
       |      40 |             XL |
       |      90 |             XC |
       |     400 |             CD |
+      |     899 |            ICM |
       |     900 |             CM |
       |    1984 |      MCMLXXXIV |
