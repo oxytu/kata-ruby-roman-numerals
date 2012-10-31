@@ -4,7 +4,7 @@ Feature: Convert roman numerals to decimals
   String class:
 
       class String
-        alias to_i to_i_original
+        alias to_i_original to_i
 
         def to_i
           \# your code goes here...
