@@ -35,8 +35,21 @@ Feature: Convert decimals to roman numerals
       |       9 |             IX |
       |      10 |              X |
       |      40 |             XL |
+      |      50 |              L |
+      |      51 |             LI |
+      |      52 |            LII |
+      |      53 |           LIII |
+      |      54 |            LIV |
+      |      55 |             LV |
+      |      56 |            LVI |
+      |      57 |           LVII |
+      |      58 |          LVIII |
+      |      59 |            LIX |
+      |      60 |             LX |
       |      90 |             XC |
       |     400 |             CD |
+      |     500 |              D |
+      |     555 |            DLV |
       |     900 |             CM |
       |    1984 |      MCMLXXXIV |
 
