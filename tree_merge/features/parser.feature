@@ -1,5 +1,20 @@
 Feature: Specification of a text-based tree and the corresponding parser
 
+  Scenario: Part of a tree
+    Given a node 
+          
+          -[name: "edge property"]- NODEIDENTIFIER [name: "Node property"]
+          
+          with an incoming edge with properties, and with properties on
+          the node itself
+
+    Then  it should be converted to the following ruby data structure
+
+          [ {name: "edge property"},
+            "NODEIDENTIFIER",
+            {name: "Node property"} ]
+                
+
   Scenario: A simple tree with properties only on nodes
     Given a tree structure <Structure>
     Then  it should be converted to a ruby <DataType>
