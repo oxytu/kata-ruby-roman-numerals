@@ -51,6 +51,10 @@ Feature: Convert decimals to roman numerals
       |     500 |              D |
       |     555 |            DLV |
       |     900 |             CM |
+      |    1000 |              M |
+      |    2000 |             MM |
+      |    3000 |            MMM |
+      |    4000 |             Mↁ |
       |    1984 |      MCMLXXXIV |
 
 

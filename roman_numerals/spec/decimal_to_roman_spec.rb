@@ -1,4 +1,4 @@
-require 'dec_to_roman'
+require 'decimal_to_roman'
 
 describe "conversion" do
   it "converts decimal numbers to their roman correspondence" do

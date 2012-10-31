@@ -41,3 +41,10 @@ end
 class Numeric
   include DecimalToRoman
 end
+
+# Just to make oxytus RSpec examples pass
+class Object
+  def dec_to_roman(i)
+    i.to_roman
+  end
+end
