@@ -28,7 +28,7 @@ end
 
 Then /^it should be converted to the decimal (\d+)$/ do |r|
   set_decimal(r)
-  roman.parse_roman_numeral.should == decimal
+  roman.to_i.should == decimal
 end
 
 Then /^it should be converted to the roman numeral '(\w+)'$/ do |r|
