@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Feature: Convert roman numerals to decimals
 
   This feature expects you to enhance the *to_i* instance method of the

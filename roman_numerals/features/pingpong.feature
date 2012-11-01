@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Feature: Convert roman numerals to decimal and vice versa
 
   Scenario: Convert decimal to roman and back to decimal
