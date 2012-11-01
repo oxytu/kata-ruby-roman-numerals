@@ -16,6 +16,7 @@ GEM
     json (1.7.3)
     linecache (0.46)
       rbx-require-relative (> 0.0.4)
+    magic_encoding (0.0.2)
     rbx-require-relative (0.0.9)
     rspec (2.9.0)
       rspec-core (~> 2.9.0)
@@ -36,5 +37,6 @@ PLATFORMS
 DEPENDENCIES
   active_support
   cucumber
+  magic_encoding
   rspec
   ruby-debug-ide

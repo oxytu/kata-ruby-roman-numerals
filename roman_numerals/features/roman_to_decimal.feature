@@ -37,3 +37,4 @@ Feature: Convert roman numerals to decimals
       |     899 |            ICM |
       |     900 |             CM |
       |    1984 |      MCMLXXXIV |
+      |    4000 |       |

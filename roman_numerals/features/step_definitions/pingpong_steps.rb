@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module KnowsPingPong
   def set_start(start)
     @start = start.to_i

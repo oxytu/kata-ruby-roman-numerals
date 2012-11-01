@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'decimal_to_roman'
 
 describe "conversion" do

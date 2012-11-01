@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RomanNumeralToDecimalTranslationError < Exception
   attr_accessor :roman_numeral
   def initialize(roman_numeral, msg)

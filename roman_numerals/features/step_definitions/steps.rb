@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module KnowsDecimalToRoman
   def set_decimal(value)
     @decimal = value.to_i

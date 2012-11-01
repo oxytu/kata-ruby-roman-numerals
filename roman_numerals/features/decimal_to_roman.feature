@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Feature: Convert decimals to roman numerals
 
   This feature expects you to implement an instance method for the
@@ -52,9 +53,11 @@ Feature: Convert decimals to roman numerals
       |     555 |            DLV |
       |     900 |             CM |
       |    1000 |              M |
+      |    1984 |      MCMLXXXIV |
       |    2000 |             MM |
       |    3000 |            MMM |
       |    4000 |             Mↁ |
-      |    1984 |      MCMLXXXIV |
+      |   10000 |             ↂ |
+
 
 
