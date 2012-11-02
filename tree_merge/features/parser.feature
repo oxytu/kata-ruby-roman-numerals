@@ -13,7 +13,6 @@ Feature: Specification of a text-based tree and the corresponding parser
           [ {name: "edge property"},
             "NODEIDENTIFIER",
             {name: "Node property"} ]
-                
 
   Scenario: A simple tree with properties only on nodes
     Given a tree structure <Structure>
