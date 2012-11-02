@@ -14,10 +14,10 @@ Feature: Specification of a text-based tree and the corresponding parser
             [ {},
               "A",
               {},
-              [ [ {},
-                  "B",
-                  {},
-                  []
+              [ [ {},       # incoming edge properties
+                  "B",      # node identifier
+                  {},       # node properties
+                  []        # array of children
                 ],
                 [ {},
                   "C",
