@@ -33,6 +33,7 @@ Then /^it should be converted to the decimal (\d+)$/ do |d|
   roman.to_i.should == decimal
 end
 
+Then /^it should be converted to the roman numeral '(.*)'$/ do |r|
   set_roman(r)
   decimal.to_roman.should == roman
 end
