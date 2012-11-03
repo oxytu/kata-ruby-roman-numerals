@@ -27,7 +27,7 @@ class String
     end
 
     if indexes.reverse.sort != indexes.reverse
-      foobar(indexes)
+      do_the_substraction_rule_stuff(indexes)
     else
       indexes.inject(0) do |n, i|
         n += DECIMALS[i]
@@ -36,7 +36,7 @@ class String
     end
   end
 
-  def foobar(indexes)
+  def do_the_substraction_rule_stuff(indexes)
     return 0 if indexes.size == 0
     i = 0
     #blocks = []
@@ -46,7 +46,7 @@ class String
       decimal -= DECIMALS[indexes[i]]
       i += 1
     end
-    decimal += DECIMALS[indexes[i]] + foobar(indexes[i+1..indexes.size-1])
+    decimal += DECIMALS[indexes[i]] + do_the_substraction_rule_stuff(indexes[i+1..indexes.size-1])
     decimal
   end
 end
