@@ -5,3 +5,5 @@ gemfile: roman_numerals/Gemfile
 script:
   - "( pushd roman_numerals/oxytu/; bundle exec rspec; popd )"
   - "( pushd roman_numerals/oxytu/; bundle exec cucumber; popd )"
+  - "( pushd roman_numerals/mahob/; bundle exec rspec; popd )"
+  - "( pushd roman_numerals/mahob/; bundle exec cucumber; popd )"
