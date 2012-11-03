@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module KnowsPingPong
   def set_start(start)
     @start = start.to_i
@@ -25,7 +26,7 @@ end
 
 Then /^each value should be converted to a roman numeral and back to a decimal$/ do
   puts "start: #{start}, stop: #{stop}"
-  (1..100).to_a.each do |n|
+  (1..10000).to_a.each do |n|
     #puts "n: #{n}, roman: #{n.to_roman}, i: #{n.to_roman.to_i}"
     n.to_roman.to_i.should eq(n)
   end

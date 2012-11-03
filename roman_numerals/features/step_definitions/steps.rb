@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module KnowsDecimalToRoman
   def set_decimal(value)
     @decimal = value.to_i
@@ -18,7 +19,7 @@ end
 
 World(KnowsDecimalToRoman)
 
-Given /^a roman numeral '(\w+)'$/ do |d|
+Given /^a roman numeral '(.*)'$/ do |d|
   set_roman(d)
 end
 
@@ -26,12 +27,13 @@ Given /^a decimal number (\d+)$/ do |d|
   set_decimal(d)
 end
 
-Then /^it should be converted to the decimal (\d+)$/ do |r|
   set_decimal(r)
+Then /^it should be converted to the decimal (\d+)$/ do |d|
+  set_decimal(d)
   roman.to_i.should == decimal
 end
 
-Then /^it should be converted to the roman numeral '(\w+)'$/ do |r|
+Then /^it should be converted to the roman numeral '(.*)'$/ do |r|
   set_roman(r)
   decimal.to_roman.should == roman
 end

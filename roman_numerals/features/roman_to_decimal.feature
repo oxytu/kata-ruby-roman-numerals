@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Feature: Convert roman numerals to decimals
 
   This feature expects you to enhance the *to_i* instance method of the
@@ -20,20 +21,22 @@ Feature: Convert roman numerals to decimals
     Given a roman numeral '<Roman Numeral>'
     Then it should be converted to the decimal <Decimal>
     Examples:
-      | Decimal |  Roman Numeral |
-      |       1 |              I |
-      |       2 |             II |
-      |       3 |            III |
-      |       4 |             IV |
-      |       5 |              V |
-      |       6 |             VI |
-      |       7 |            VII |
-      |       8 |           VIII |
-      |       9 |             IX |
-      |      10 |              X |
-      |      40 |             XL |
-      |      90 |             XC |
-      |     400 |             CD |
-      |     899 |            ICM |
-      |     900 |             CM |
-      |    1984 |      MCMLXXXIV |
+      | Roman Numeral | Decimal   |
+      | I             |         1 |
+      | II            |         2 |
+      | III           |         3 |
+      | IV            |         4 |
+      | V             |         5 |
+      | VI            |         6 |
+      | VII           |         7 |
+      | VIII          |         8 |
+      | IX            |         9 |
+      | X             |        10 |
+      | XL            |        40 |
+      | XC            |        90 |
+      | CD            |       400 |
+      | ICM           |       899 |
+      | CM            |       900 |
+      | MCMLXXXIV     |      1984 |
+      | Mↁ            |      4000 |
+      | ↂ             |     10000 |

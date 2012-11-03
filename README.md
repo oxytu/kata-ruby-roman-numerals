@@ -1,5 +1,11 @@
-This repository contains some Katas, which should help you
-craft your programming skills by solving complex problems.
+About
+=====
+
+This repository contains some [Katas](http://en.wikipedia.org/wiki/Kata "WTF is a Kata?"),
+which should help you craft your programming skills by solving more or less complex problems.
+
+Rules
+=====
 
 Each Kata has it's own subdirectory, containing unit tests in
 cucumber or rspec, or both. Further subdirectories contain

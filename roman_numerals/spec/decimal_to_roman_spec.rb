@@ -1,4 +1,5 @@
-require 'dec_to_roman'
+# -*- encoding : utf-8 -*-
+require 'decimal_to_roman'
 
 describe "conversion" do
   it "converts decimal numbers to their roman correspondence" do
