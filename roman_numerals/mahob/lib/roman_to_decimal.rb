@@ -39,8 +39,6 @@ class String
   def do_the_substraction_rule_stuff(indexes)
     return 0 if indexes.size == 0
     i = 0
-    #blocks = []
-    #block = []
     decimal = 0
     while (indexes[i + 1] && indexes[i] < indexes[i + 1]) do
       decimal -= DECIMALS[indexes[i]]
