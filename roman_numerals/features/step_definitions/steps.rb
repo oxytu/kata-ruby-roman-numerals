@@ -19,6 +19,7 @@ end
 
 World(KnowsDecimalToRoman)
 
+Given /^a roman numeral '(.*)'$/ do |d|
   set_roman(d)
 end
 
@@ -27,6 +28,8 @@ Given /^a decimal number (\d+)$/ do |d|
 end
 
   set_decimal(r)
+Then /^it should be converted to the decimal (\d+)$/ do |d|
+  set_decimal(d)
   roman.to_i.should == decimal
 end
 
