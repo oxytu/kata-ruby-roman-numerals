@@ -20,7 +20,7 @@ module DecimalToRoman
 end
 
 module RomanToDecimal
-  def parse_roman_numeral
+  def roman_to_i
     roman_to_dec(self.to_s.downcase)
   end
 end

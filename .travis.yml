@@ -2,4 +2,6 @@ language: ruby
 rvm:
   - "1.8.7"
 gemfile: roman_numerals/Gemfile
-script: "( cd roman_numerals/oxytu/; bundle exec rspec )"
+script:
+  - "( pushd roman_numerals/oxytu/; bundle exec rspec; popd )"
+  - "( pushd roman_numerals/oxytu/; bundle exec cucumber; popd )"

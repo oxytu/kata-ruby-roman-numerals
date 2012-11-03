@@ -28,6 +28,6 @@ Then /^each value should be converted to a roman numeral and back to a decimal$/
   puts "start: #{start}, stop: #{stop}"
   (1..10000).to_a.each do |n|
     #puts "n: #{n}, roman: #{n.to_roman}, i: #{n.to_roman.to_i}"
-    n.to_roman.to_i.should eq(n)
+    n.to_roman.roman_to_i.should eq(n)
   end
 end

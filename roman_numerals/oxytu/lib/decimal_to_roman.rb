@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 #!/usr/bin/ruby
 
+$: << File.expand_path(File.dirname(__FILE__) + "/../lib")
+
 require 'defs'
 
 num = ARGV[0].to_i

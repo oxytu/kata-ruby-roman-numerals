@@ -27,10 +27,10 @@ Given /^a decimal number (\d+)$/ do |d|
   set_decimal(d)
 end
 
-  set_decimal(r)
 Then /^it should be converted to the decimal (\d+)$/ do |d|
   set_decimal(d)
-  roman.to_i.should == decimal
+  puts "decimal=#{decimal} and roman=#{roman.inspect}"
+  roman.roman_to_i.should == decimal
 end
 
 Then /^it should be converted to the roman numeral '(.*)'$/ do |r|

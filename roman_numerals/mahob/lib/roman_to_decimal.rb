@@ -6,9 +6,7 @@ class String
   DECIMALS =   [1, 5, 10, 50, 100, 500, 1000, 5000, 10000]
   ROMAN_REGEX = /[IVXLCDMↁↂ]+/i
 
-  alias to_i_original to_i
-
-  def to_i
+  def roman_to_i
     if self =~ ROMAN_REGEX
       decimalize(self)
     else
