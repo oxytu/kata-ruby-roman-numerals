@@ -5,6 +5,4 @@ gem 'rspec'
 gem 'cucumber'
 gem 'magic_encoding'
 
-group [:development, :test] do
-  gem 'ruby-debug-ide', '0.4.17.beta14'
-end
+gem 'ruby-debug-ide', '0.4.17.beta14', :group => [:development, :test]
