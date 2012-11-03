@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/oxytu/katas.png)](http://travis-ci.org/oxytu/katas)
+
 About
 =====
 
