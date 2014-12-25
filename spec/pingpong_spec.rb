@@ -8,7 +8,7 @@ describe "pingpong test" do
       r = dec_to_roman(i + 1)
       d = i + 1
       #puts "#{r} == #{d} ?"
-      roman_to_dec(r).should eql(d)
+      expect(roman_to_dec(r)).to eql(d)
     end
   end
 end

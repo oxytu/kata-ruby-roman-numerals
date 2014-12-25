@@ -12,8 +12,8 @@ $extended_values = {}
 def build_extended_values
   $values.keys.each do |v|
     if ($values[v].to_s[0,1] == "1" && $values[v] < MAX_DEC)
-      five_sym = $values.index($values[v] * 5)
-      ten_sym = $values.index($values[v] * 10)
+      five_sym = $values.key($values[v] * 5)
+      ten_sym = $values.key($values[v] * 10)
       $extended_values[$values[v]] = v.to_s
       $extended_values[$values[v] * 2] = v.to_s + v.to_s
       $extended_values[$values[v] * 3] = v.to_s + v.to_s + v.to_s
