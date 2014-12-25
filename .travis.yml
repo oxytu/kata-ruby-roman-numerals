@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - "1.8.7"
+  - "2.1.4"
 gemfile: Gemfile
 script:
   - "( pushd oxytu/; bundle exec rspec; popd )"
